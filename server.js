@@ -1,8 +1,8 @@
 var express = require('express');
 var app = express();
-var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 // route level middleware
-var middleware = require('./middleware'); 
+var middleware = require('./middleware');
 
 //app.use(middleware.requireAuthentication);
  app.use(middleware.logger);
